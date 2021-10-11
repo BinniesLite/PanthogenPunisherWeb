@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-plot-listing.css">
+    <link rel="stylesheet" href="assets/css/animated.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+
+    <!-- background image that scroll -->
+    <style>
+        .background_change {
+            background-image: url("https://c4.wallpaperflare.com/wallpaper/500/442/354/outrun-vaporwave-hd-wallpaper-preview.jpg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            /* <= This one */
+        }
+    </style>
+    <!-- Font pixel -->
+    <style>
+        @font-face {
+            font-family: upheavtt;
+            src: url(assets/fonts/upheavtt.ttf);
+        }
+        
+        div {
+            font-size: 35px;
+            font-family: upheavtt;
+        }
+    </style>
+
+    <!-- Hover zoom image -->
+    <style>
+        /* [1] The container */
+        
+        .img-hover-zoom {
+            height: px;
+            /* [1.1] Set it as per your need */
+            overflow: hidden;
+            /* [1.2] Hide the overflowing of child elements */
+        }
+        /* [2] Transition property for smooth transformation of images */
+        
+        .img-hover-zoom img {
+            transition: transform .5s ease;
+        }
+        /* [3] Finally, transforming the image when container gets hovered */
+        
+        .img-hover-zoom:hover img {
+            transform: scale(1.1);
+        }
+    </style>
+    <!-- Making a Dot -->
+    <style>
+        .dot {
+            height: 5px;
+            width: 5px;
+            background-color: white;
+            border-radius: 50%;
+            display: inline-block;
+        }
+    </style>
+
+    <!-- Style for the video -->
+    <style>
+        header video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: 0;
+            -ms-transform: translateX(-50%) translateY(-50%);
+            -moz-transform: translateX(-50%) translateY(-50%);
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+        }
+        
+        header .container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        header .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: black;
+            opacity: 0.5;
+            z-index: 1;
+        }
+        /* Media Query for devices withi coarse pointers and no hover functionality */
+        /* This will use a fallback image instead of a video for devices that commonly do not support the HTML5 video element */
+        
+        @media (pointer: coarse) and (hover: none) {
+            header {
+                background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+            }
+            header video {
+                display: none;
+            }
+        }
+    </style>
+    <style>
+        #header {}
+        
+        ;
+    </style>
+</head>
+
+<body class="#ffffff" style="background: black; color: white;">
+    <!-- ***** Preloader Start ***** -->
+    <div id="js-preloader" class="js-preloader">
+        <div class="preloader-inner">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+    <div class="overlay"></div>
+
+    <!-- The HTML5 video element that will create the background video on the header -->
+    <video style="width: 100% " playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+      <source src="assets/video/Covid-19 - 33654.mp4" type="video/mp4">
+    </video>
+
+    <!-- The header content -->
+    <div class="container h-100 card-img-overlay">
+        <div class="d-flex h-100 text-center align-items-center ">
+            <div class="w-100 text-white wow fadeIn">
+                <h1 class="display-3">Pathogen Punisher</h1>
+                <p class="display-5" style="color:red; ">For Humanity</p>
+            </div>
+        </div>
+    </div>
+    </header>
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area bg-transparent" id="header" data-wow-duration="0.75s" data-wow-delay="0s">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav bg-transparent">
+                        <!-- ***** Logo Start ***** -->
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav
+                         bg-transparent">
+                            <li><a href="#header">Home</a></li>
+                            <li> <a href="#about">About</a></li>
+
+
+                            <li style="color: red">
+                                <a href="https://github.com/SrthkS/PathogenPunisher "> DOWNLOAD
+                                </a>
+                            </li>
+                        </ul>
+
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <div id="about" style="margin-top:150px; ">
+        <div class="popular-categories ">
+            <div class="container ">
+                <!-- First -->
+                <div class="row ">
+                    <div class="col-lg-12 ">
+                        <div class="section-heading text-white ">
+                            <h2 class="text-white ">Descend into the dark</h2>
+                        </div>
+                    </div>
+                    <div class="container-fluid ">
+                        <div class="row " style="margin-right:50px; margin-top: 0; width: 100% ">
+                            <div class="col-lg-6 wow fadeInLeft ">
+                                <img src="assets/images/about-image-01.png " alt=" ">
+                            </div>
+                            <div class="col-lg-6 wow fadeInRight " style=" ">
+                                <h1>
+                                    Brave into the unknown territories
+                                </h1>
+                                <br>
+                                <br>
+                                <h6>
+                                    Dwelve into the deep dark nest of the infected lung. You as the white cells must battle to the death with the evil virus and bring piece to the lung again
+                                    <br>
+                                    <br> Never give up protect your mental system to the end, that's what you're fighting for
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="row " style="margin-right:50px; margin-top: 50px; width: 100% ">
+                            <div class="col-lg-6 wow fadeInLeft ">
+                                <h1>
+                                    Protect those you love from the wicked plague
+                                </h1>
+                                <br>
+                                <h6 style=" ">
+                                    Pathogen Punisher is a 3D game to educate about the dilemma the whole world is facing as you go deeper into the secret the more it is reveal to you
+                                    <br>
+                                    <br>
+                                    <ol>
+                                        <li>
+                                            <div class="dot" "></div> The virus must be stop</li>
+                                            <li>
+                                                <div class="dot " "></div> Encounter bizzare entities</li>
+                                        <li>
+                                            <div class="dot" "></div> Evolve with skills</li>
+                                    </ol>
+                                </h6>
+                            </div>
+                            <div class=" col-lg-6 wow fadeInRight ">
+                                <img src="assets/images/about-image-02.png " alt=" ">
+                            </div>
+                        </div>
+                        <div class="row " style="margin-right:50px; margin-top: 50px ; width: 100% ">
+                            <div class="col-lg-6 wow fadeInLeft ">
+                                <img src="assets/images/about-image-03.png " alt=" ">
+                            </div>
+                            <div class="col-lg-6 wow fadeInRight " style=" ">
+                                <h1>
+                                   The World of Pathogen Punisher
+                                </h1>
+                                <br>
+                         
+                                <h6>
+                                   The world of patheogon punisher is brought to life in vivid, aesthetic and artistic details, its world built with the aim
+                                   to educate, to teach the importance of information as information is key. As you go deeper and deeper, the veil of this mysterious
+                                   plague will reveal, the horror it brought, the life its ruin and the destruction followed its path. Only with educating ourselves an 
+                                   collaborating we can bring this plague down
+                                </h6>
+                            </div>
+                        </div>
+                        <!-- The t -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Recent-listing -->
+<div id="anchor2 ">
+    <div class="recent-listing " id=" anchor ">
+        <div class="container ">
+            <div class="row wow fadeIn ">
+                <div class="col-lg-12 ">
+                    <div class="top-text header-text " style="margin-bottom: 20px ">
+                        <h1 class="text-white " style="font-style: italic; ">“If you know the enemy and know yourself, you need not fear the result of a hundred battles"</h1>
+                                                <br>
+                                                <h2 style="font-style: bold; ;">-Sun Tzu</h2>
+                                            </div>
+                            </div>
+                            <iframe width="1045" height="500" src=https://www.youtube.com/embed/5DGwOJXSxqg ">
+          </iframe>
+          <!-- <div class="row ">
+            <div class="col-lg-6 "></div>
+            
+            <div class="col-lg-6 ">
+                <div class="top-text header-text " style="margin-bottom: 20px ">
+                    <h1 class="text-white " style="font-style: italic; ">Don't let them catch you off guard!"</h1>
+
+                        </div>
+                    </div>
+                </div>
+                <iframe width="1045 " height="500 " src=https://www.youtube.com/embed/5DGwOJXSxqg "></iframe>
+                         -->
+
+                <div class="col-lg-6 mt-5 wow fadeInLeftBig ">
+                    <div class="top-text header-text " style="margin-bottom: 20px; margin-top: 50px; font:red ">
+                        <h1 class="text-white ">Don't be fear help is here</h1>
+                        <h4 style="font-style: bold red; ">If you're struggling we have resources to help you</h2>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row wow fadeIn " style="color: white ; ">
+                <div class="col-lg-4 img-hover-zoom " style=" ">
+                    <a target="_blank " href="https://www.hopkinsmedicine.org/health/conditions-and-diseases/coronavirus/proper-mask-wearing-coronavirus-prevention-infographic ">
+                        <img style src="assets/images/resources-icons-01.png " alt="Mask ">
+
+                    </a>
+                </div>
+                <div class="col-lg-4 img-hover-zoom " style=" ">
+                    <a target="_blank " href="https://www.fda.gov/drugs/coronavirus-covid-19-drugs/hand-sanitizers-covid-19#:~:text=Washing%20hands%20often%20with%20soap,or%20ethyl%20alcohol). ">
+                        <img src="assets/images/resources-icons-02.png " alt="Mask ">
+                    </a>
+                </div>
+                <div class="col-lg-4 img-hover-zoom " style=" ">
+                    <a target="_blank " href="https://www.smithsonianmag.com/science-nature/exactly-how-far-should-you-distance-others-avoid-covid-19-180975870/ ">
+                        <img src="assets/images/resources-icons-03.png " alt="Mask ">
+                    </a>
+                </div>
+            </div>
+            <!-- Word -->
+            <div class="row wow fadeIn " style="color: white ; margin-top: 20px ">
+                <div class="col-lg-4 img-hover-zoom " style=" ">
+                    <p>Wear the mask</p>
+                </div>
+                <div class="col-lg-4 img-hover-zoom " style=" ">
+                    <p>Wash your hand</p>
+                </div>
+                <div class="col-lg-4 img-hover-zoom " style=" ">
+                    <p>Keep your distance </p>
+                </div>
+            </div>
+            <!-- Word end -->
+            <div class="row wow fadeIn " style="color: white ; margin-top: 15px ; ">
+                <div class="col-lg-4 img-hover-zoom " style=" ">
+                    <a target="_blank " href="https://www.vaccines.gov/ ">
+                        <img src="assets/images/resources-icons-04.png " alt="Mask ">
+                    </a>
+                </div>
+                <div class="col-lg-4 img-hover-zoom " style=" ">
+                    <a href="https://www.healthline.com/health/sure-signs-you-ve-already-had-covid#signs ">
+                        <img src="assets/images/resources-icons-05.png " alt="Mask ">
+                    </a>
+                    
+                </div>
+                <div class="col-lg-4 img-hover-zoom " style=" ">
+                    <a target="_blank " href="https://www.healthline.com/health/systematic-desensitization ">
+                        <img src="assets/images/resources-icons-06.png " alt="Mask ">
+                    </a>
+                </div>
+            </div>
+            <!-- Word -->
+            <div class="row wow fadeIn " style="color: white ; margin-top: 20px ">
+                <div class="col-lg-4 img-hover-zoom " style=" ">
+                    <p>Vaccine is your friend
+                        <p>
+                </div>
+                <div class="col-lg-4 img-hover-zoom " style=" ">
+                    <p>Monitor your health</p>
+                </div>
+                <div class="col-lg-4 img-hover-zoom " style=" ">
+                    <p>Disenitize everything</p>
+                </div>
+            </div>
+            <!-- Word end -->
+
+        </div>
+    </div>
+</div>
+    
+    </div>
+
+    <!-- Guide to the covid -->
+
+    </div>
+
+    <!-- End to the guide -->
+    <!-- Begin footer -->
+    <footer style="background-color: red; ">
+        <div class="container ">
+            <div class="row ">
+                <div class="col-md-8 offset-md-2 " style="padding-bottom: 20px ">
+                    <h1>Be SAFE and Have FUN </h1>
+                    <br><br><br>
+                    <h2></h2>
+                </div>
+            </div>
+
+            <div class="row ">
+                <div class="col-md-8 offset-md-2 " style="margin-bottom: 1000px ">
+                </div>
+
+                <div class="row wow fadeIn ">
+                    <div class="col-md-8 offset-md-2 " style="padding-bottom: 20px ">
+                        <h1>Why're you still here</h1>
+                    </div>
+                </div>
+
+                <div class="row ">
+                    <div class="col-md-8 offset-md-2 " style="margin-bottom: 1000px ">
+
+                    </div>
+
+                    <div class="row wow fadeIn ">
+                        <div class="col-md-8 offset-md-2 " style="padding-bottom: 20px ">
+                            <h1>There's nothing here</h1>
+                        </div>
+                    </div>
+
+                    <div class="row ">
+                        <div class="col-md-8 offset-md-2 " style="margin-bottom: 1000px ">
+                        </div>
+                    </div>
+                    <div class="row wow fadeIn ">
+                        <div class="col-md-6 offset-md-2 " style="padding-bottom: 20px ">
+                            <h1>You did it you reach the file! Congratulation!</h1>
+                            <h1>     <a href=" https://github.com/SrthkS/PathogenPunisher "> Here is your reward</a>
+                            </h1>         
+                        </div>
+                    </div>
+
+                    <div id="SectionName " style="display:none ">Text to be shown and hidden </div>
+
+    </footer>
+    <!-- Flappy bird -->
+    <script type="text/javascript " src="mainfb.js "></script>
+    <script type="text/javascript " src="phaser.min.js "></script>
+    <!-- Show and Hide -->
+    <SCRIPT>
+        function ShowAndHide() {
+            var x = document.getElementById('SectionName');
+            if (x.style.display == 'none') {
+                x.style.display = 'block';
+            } else {
+                x.style.display = 'none';
+            }
+        }
+    </SCRIPT>
+    <!-- Scripts -->
+    <script src="vendor/jquery/jquery.min.js "></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js "></script>
+    <script src="assets/js/owl-carousel.js "></script>
+    <script src="assets/js/animation.js "></script>
+    <script src="assets/js/imagesloaded.js "></script>
+    <script src="assets/js/custom.js "></script>
+
+
+</body>
+
+</html>
+
+</html>
